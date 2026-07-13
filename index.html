@@ -5,7 +5,7 @@
 <script src="assets/7e39e8c5-f80a-4108-a1fa-1ef82442fdef.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<base href="/">
+<base href="./">
 <link rel="modulepreload" href="assets/spline-runtime.js">
 <link rel="preload" as="fetch" href="assets/operiva-robot.splinecode" crossorigin="anonymous">
 <script src="assets/3c6e4cec-b4ad-443d-bda6-d0e735c99163.js"></script>
@@ -1421,7 +1421,7 @@
 <!-- ============ HEADER ============ -->
 <header data-screen-label="Шапка" style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(10,11,14,0.72); backdrop-filter: blur(20px) saturate(1.4); border-bottom: 1px solid rgba(255,255,255,0.06)">
   <div style="max-width: 1320px; margin: 0 auto; padding: 0 48px; height: 68px; display: flex; align-items: center; gap: 36px">
-    <a href="#hero" style="display: inline-flex; align-items: center; gap: 10px; font-family: Sora, sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.22em; color: #f2f3f5"><img src="assets/236931fc-a109-4852-b3de-e6e4e279b858.png" alt="OPERIVA" style="width: 22px; height: 22px; object-fit: contain">OPERIVA</a>
+    <a href="#hero" style="display: inline-flex; align-items: center; gap: 10px; font-family: Sora, sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.22em; color: #f2f3f5"><img src="assets/operiva-mark.svg" alt="OPERIVA" style="width: 22px; height: 22px; object-fit: contain">OPERIVA</a>
     <nav style="display: flex; gap: 26px; flex: 1; justify-content: center; flex-wrap: wrap">
       <sc-for list="{{ navItems }}" as="nav" hint-placeholder-count="7">
         <a href="{{ nav.href }}" style="font-size: 13px; color: #a3abb8; transition: color 0.2s" style-hover="color: #f2f3f5">{{ nav.label }}</a>
@@ -1796,7 +1796,7 @@
         <div style="position: absolute; inset: -30px 15% 0; background: radial-gradient(55% 70% at 50% 100%, rgba(111,231,200,0.08), transparent 70%); pointer-events: none"></div>
         <div style="position: relative; border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; background: #0a0b0e; overflow: hidden; box-shadow: 0 40px 90px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.07)">
           <div style="display: flex; align-items: center; gap: 14px; padding: 16px 26px; border-bottom: 1px solid rgba(255,255,255,0.07)">
-            <span style="display: inline-flex; align-items: center; gap: 8px; font-family: Sora, sans-serif; font-size: 14px; font-weight: 600"><img src="assets/236931fc-a109-4852-b3de-e6e4e279b858.png" alt="" style="width: 16px; height: 16px; object-fit: contain">OPERIVA Console</span>
+            <span style="display: inline-flex; align-items: center; gap: 8px; font-family: Sora, sans-serif; font-size: 14px; font-weight: 600"><img src="assets/operiva-mark.svg" alt="" style="width: 16px; height: 16px; object-fit: contain">OPERIVA Console</span>
             <span style="display: inline-flex; align-items: center; gap: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6fe7c8"><span style="width: 6px; height: 6px; border-radius: 50%; background: #6fe7c8; display: inline-block; animation: nx-pulse 2s infinite"></span>live</span>
             <span style="flex: 1"></span>
             <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #5c6370; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 4px 10px">Demo · пример сценария</span>
@@ -2076,7 +2076,7 @@
   <div style="max-width: 1320px; margin: 0 auto; padding: 0 48px">
     <div style="display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 56px; margin-bottom: 48px">
       <div>
-        <div style="display: flex; align-items: center; gap: 12px; font-family: Sora, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: 0.22em; margin-bottom: 16px"><img src="assets/236931fc-a109-4852-b3de-e6e4e279b858.png" alt="OPERIVA" style="width: 26px; height: 26px; object-fit: contain">OPERIVA</div>
+        <div style="display: flex; align-items: center; gap: 12px; font-family: Sora, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: 0.22em; margin-bottom: 16px"><img src="assets/operiva-mark.svg" alt="OPERIVA" style="width: 26px; height: 26px; object-fit: contain">OPERIVA</div>
         <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #6fe7c8; margin-bottom: 16px">AI-агенты для&nbsp;продаж, поддержки и&nbsp;операций</div>
         <div style="font-size: 13px; line-height: 1.75; color: #a3abb8; max-width: 330px">OPERIVA создаёт и&nbsp;внедряет AI-агентов, которые берут на&nbsp;себя коммуникацию, продажи, сервис и&nbsp;операции&nbsp;— и&nbsp;подключаются к&nbsp;вашим текущим системам.</div>
       </div>
@@ -2631,7 +2631,7 @@ class Component extends DCLogic {
 
 <div id="static-fallback" aria-label="OPERIVA">
   <div class="sf-wrap">
-    <div class="sf-logo"><img src="assets/236931fc-a109-4852-b3de-e6e4e279b858.png" alt="">OPERIVA</div>
+    <div class="sf-logo"><img src="assets/operiva-mark.svg" alt="">OPERIVA</div>
     <div class="sf-kicker">AI-агенты для бизнеса · Hospitality & Tourism</div>
     <h1>AI-агенты и цифровые сотрудники для бизнеса, который не хочет терять заявки</h1>
     <p>OPERIVA внедряет AI-агентов в продажи, поддержку и операционные процессы: они отвечают клиентам, обрабатывают обращения, передают задачи команде и показывают результат в единой консоли.</p>
