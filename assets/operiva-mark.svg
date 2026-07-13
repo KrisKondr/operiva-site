@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="614" height="626"
+     viewBox="0 0 614 626"
+     role="img"
+     aria-label="Vector logo"
+     shape-rendering="geometricPrecision">
+  <title>Vector logo</title>
+  <g id="logo-mark" fill="#5AFEF7">
+    <!-- Main descending ribbon -->
+    <path d="M 67 75
+             H 131
+             L 547 475
+             V 545
+             H 481
+             L 67 145
+             Z"/>
+
+    <!-- Upper-right ascending ribbon -->
+    <path d="M 480 75
+             H 547
+             V 144
+             L 405 283
+             L 337 216
+             Z"/>
+
+    <!-- Lower-left ascending ribbon -->
+    <path d="M 206 336
+             L 275 401
+             L 131 545
+             H 67
+             V 475
+             Z"/>
+  </g>
+</svg>
