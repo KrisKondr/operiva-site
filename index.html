@@ -6,8 +6,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <base href="./">
-<link rel="modulepreload" href="assets/spline-runtime.js">
-<link rel="preload" as="fetch" href="assets/operiva-robot.splinecode" crossorigin="anonymous">
 <script src="assets/3c6e4cec-b4ad-443d-bda6-d0e735c99163.js"></script>
 <script>document.documentElement.classList.add("js");</script>
 <style>
@@ -1164,27 +1162,6 @@
 </style>
 </head>
 <body>
-<div id="operiva-intro" class="nx-intro is-spline-loading" role="dialog" aria-label="Приветствие OPERIVA">
-  <div class="nx-intro-grid" aria-hidden="true"></div>
-  <div class="nx-intro-floor" aria-hidden="true"></div>
-  <div class="nx-pointer-light" aria-hidden="true"></div>
-  <div class="nx-intro-scan" aria-hidden="true"></div>
-  <div class="nx-robot-stage">
-    <div class="nx-robot-rig">
-      <div id="operiva-spline-shell" class="nx-spline-shell" aria-hidden="true">
-        <canvas id="operiva-spline" aria-label="Интерактивный 3D-робот OPERIVA"></canvas>
-      </div>
-      <span class="nx-spline-loader" aria-hidden="true"></span>
-      <button id="operiva-enter" class="nx-holo-button" type="button" aria-label="Войти на сайт">
-      </button>
-    </div>
-  </div>
-  <button class="nx-intro-skip" type="button" aria-label="Пропустить приветствие">
-    <span class="nx-intro-skip-icon" aria-hidden="true"></span>
-  </button>
-  <div class="nx-intro-progress" aria-hidden="true"></div>
-  <div class="nx-intro-flash" aria-hidden="true"></div>
-</div>
 <x-dc>
 <helmet>
   <meta charset="utf-8">
@@ -2646,55 +2623,7 @@ class Component extends DCLogic {
     </div>
   </div>
 </div>
-<script type="module" src="assets/operiva-spline.js"></script>
-<script>
-  (function () {
-    var intro = document.getElementById("operiva-intro");
-    if (!intro) return;
 
-    var skip = intro.querySelector(".nx-intro-skip");
-    var enter = intro.querySelector("#operiva-enter");
-    var reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var finished = false;
-    var autoFinish = 0;
-
-    document.body.classList.add("intro-active");
-
-    function removeIntro() {
-      intro.classList.add("is-gone");
-      window.setTimeout(function () {
-        intro.remove();
-        document.body.classList.remove("intro-active");
-      }, 100);
-    }
-
-    function finish() {
-      if (finished) return;
-      finished = true;
-      window.clearTimeout(autoFinish);
-      window.dispatchEvent(new CustomEvent("operiva:intro-finish"));
-      intro.classList.add("is-exiting");
-      window.setTimeout(removeIntro, reducedMotion ? 40 : 240);
-    }
-
-    if (skip) skip.addEventListener("click", finish);
-    if (enter) {
-      enter.addEventListener("click", finish);
-      enter.addEventListener("pointerenter", function () { intro.classList.add("is-logo-hovered"); });
-      enter.addEventListener("pointerleave", function () { intro.classList.remove("is-logo-hovered"); });
-      enter.addEventListener("focus", function () { intro.classList.add("is-logo-hovered"); });
-      enter.addEventListener("blur", function () { intro.classList.remove("is-logo-hovered"); });
-    }
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") finish();
-    });
-
-    window.requestAnimationFrame(function () {
-      window.requestAnimationFrame(function () { intro.classList.add("is-running"); });
-    });
-    autoFinish = window.setTimeout(finish, reducedMotion ? 1500 : 11000);
-  }());
-</script>
 <script>
   (function () {
     function mainRendered() {
